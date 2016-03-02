@@ -1,8 +1,8 @@
 settings = {
   core = {
-    real_name = "Clayton Parker";
-    user_name = "claytron";
-    nick = "claytron";
+    real_name = "Calvin Hendryx-Parker";
+    user_name = "calvinhp";
+    nick = "calvinhp";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { autolog = "yes"; };
@@ -11,8 +11,8 @@ settings = {
     neat_allow_shrinking = "ON";
     neat_maxlength = "13";
     neat_ignorechars = "[_]";
-    mailhilights_from = "internets@claytron.com";
-    mailhilights_to = "me@claytron.com";
+    mailhilights_from = "calvin@sixfeetup.com";
+    mailhilights_to = "calvin@sixfeetup.com";
     smshilights_command = "~/bin/smsme.sh";
     mailhilights_subject_chan = "[irc] $; mentioned something you are interested in";
     mailhilights_subject_query = "[irc] $, sent you a private message";
@@ -45,8 +45,8 @@ servers = (
 );
 
 chatnets = {
-  freenode = { type = "IRC"; nick = "claytron"; };
-  whatcd = { type = "IRC"; nick = "claytron"; };
+  freenode = { type = "IRC"; nick = "calvinhp"; };
+  whatcd = { type = "IRC"; nick = "calvinhp"; };
 };
 
 channels = (
@@ -60,7 +60,6 @@ channels = (
   { name = "#karl"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#repoze"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#zsh"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#what.cd"; chatnet = "whatcd"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -240,7 +239,7 @@ ignores = (
   }
 );
 hilights = (
-  { text = "claytron"; nick = "yes"; word = "yes"; },
+  { text = "calvinhp"; nick = "yes"; word = "yes"; },
   { text = "six feet up"; nick = "yes"; word = "yes"; },
   { text = "lineage"; nick = "yes"; word = "yes"; }
 );

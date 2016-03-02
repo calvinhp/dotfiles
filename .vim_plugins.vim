@@ -13,12 +13,9 @@ Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
 Plug 'Rykka/riv.vim'
 Plug 'saltstack/salt-vim'
 Plug 'slim-template/vim-slim'
-Plug 'smancill/conky-syntax.vim'
 Plug 'sukima/xmledit'
-Plug 'superbrothers/vim-vimperator'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rails'
-Plug 'vim-scripts/bbcode'
 
 " Object manipulation
 Plug 'godlygeek/tabular'
@@ -39,6 +36,7 @@ Plug 'IngoHeimbach/vim-mac-classic-theme'
 Plug 'vim-scripts/marklar.vim'
 Plug 'vim-scripts/simplewhite.vim'
 Plug 'tomasr/molokai'
+Plug 'twerth/ir_black'
 
 " UI
 Plug 'vim-airline/vim-airline' | Plug 'paranoida/vim-airlineish' | Plug 'vim-airline/vim-airline-themes'

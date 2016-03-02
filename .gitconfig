@@ -2,8 +2,8 @@
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
 [user]
-	name = Clayton Parker
-	email = me@claytron.com
+	name = Calvin Hendryx-Parker
+	email = calvin@sixfeetup.com
 [color]
 	ui = auto
 [color "branch"]
@@ -71,12 +71,12 @@
 [achievement]
 	upload = true
 [github]
-	user = claytron
+	user = calvinhp
 [branch "master"]
 	remote = origin
 	merge = master
 [svn]
-	authorsfile = /Users/clayton/.git-authorsfile
+	authorsfile = /Users/calvin/.git-authorsfile
 [branch]
 	autosetuprebase = always
 [diff]
