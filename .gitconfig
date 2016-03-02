@@ -83,3 +83,5 @@
 	algorithm = patience
 [push]
 	default = current
+[rebase]
+    autostash = true
