@@ -137,6 +137,9 @@ if [ -d "$HOME/.config" ]; then
     linkDotfile "$dotfile" "$to_create" "$actual_dotfile"
 fi
 
+# link vimrc for neovim to use
+[ ! -L "$HOME/.vim/init.vim" ] && ln -s "$HOME/.vimrc" "$HOME/.vim/init.vim"
+
 # Install the vim plugins
 which vim && vim -c PlugInstall -c qa
 
