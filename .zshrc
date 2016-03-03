@@ -237,7 +237,7 @@ fi
 
 # use some crazy ass shell prompt
 # thanks to for the basis: http://aperiodic.net/phil/prompt/
-ME="clayton"
+ME="calvin"
 source ~/.zshprompt
 
 # load up per environment extras
