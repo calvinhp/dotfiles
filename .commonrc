@@ -267,7 +267,6 @@ else
 fi
 
 # Virtualenv/wrapper stuff
-alias w=workon
 alias mkv=mkvirtualenv
 alias cds=cdsitepackages
 
