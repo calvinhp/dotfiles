@@ -363,9 +363,11 @@ let python_highlight_all=1
 
 " gui and terminal compatible color scheme
 set t_Co=256
-set background=dark
+"set background=dark
+set background=light
 " set global variables that will define the colorscheme
-let g:light_theme='solarized8_light_high'
+let g:light_theme='one'
+" let g:light_theme='solarized8_light_high'
 let g:dark_theme='solarized8_dark_high'
 
 " Use the "original" molokai theme colors instead of "dark"
@@ -441,6 +443,7 @@ function! s:completeColorSchemes(A,L,P)
 endfunction
 
 " set the colorscheme
+" ColorSwitcher g:dark_theme
 ColorSwitcher g:dark_theme
 
 " switch between light and dark colors
@@ -793,7 +796,7 @@ let g:debuggerMiniBufExpl = 1
 
 " Airline                                                      {{{2
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-let g:airline_theme='distinguished'
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 0
 

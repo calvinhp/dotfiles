@@ -40,6 +40,7 @@ Plug 'twerth/ir_black'
 Plug 'lifepillar/vim-solarized8'
 Plug 'croaky/vim-colors-github'
 Plug 'iissnan/tangoX'
+Plug 'rakr/vim-one'
 
 " UI
 Plug 'vim-airline/vim-airline' | Plug 'paranoida/vim-airlineish' | Plug 'vim-airline/vim-airline-themes'
