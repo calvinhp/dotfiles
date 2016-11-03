@@ -77,14 +77,14 @@
 	merge = master
 [svn]
 	authorsfile = /Users/calvin/.git-authorsfile
-[branch]
-	autosetuprebase = always
+#[branch]
+#	autosetuprebase = always
 [diff]
 	algorithm = patience
 [push]
 	default = current
-[rebase]
-    autostash = true
+#[rebase]
+#    autostash = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

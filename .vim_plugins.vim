@@ -54,6 +54,7 @@ Plug 'mhinz/vim-signify'
 Plug 'mtth/scratch.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'rhysd/conflict-marker.vim'
 
 " File Previews
 Plug 'Rykka/InstantRst'
