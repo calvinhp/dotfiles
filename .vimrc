@@ -368,7 +368,7 @@ set background=light
 " set global variables that will define the colorscheme
 let g:light_theme='one'
 " let g:light_theme='solarized8_light_high'
-let g:dark_theme='solarized8_dark_high'
+let g:dark_theme='molokai'
 
 " Use the "original" molokai theme colors instead of "dark"
 let g:molokai_original=1
