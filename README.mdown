@@ -32,7 +32,7 @@ Usage in the wild
 
 Here is how I typically set up my shell on a new system.
 
-    $ git clone https://github.com/claytron/dotfiles.dotfiles
+    $ git clone https://github.com/calvinhp/dotfiles .dotfiles
     $ .dotfiles/create_links.sh
     linking .screenrc
     linking .vimrc
