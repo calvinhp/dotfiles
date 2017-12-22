@@ -745,6 +745,10 @@ map <leader>a :Ack!<Space>
 " highlight search term matches
 let g:ackhighlight = 1
 
+map <leader>r :Rg<Space>
+let g:rg_binary = 'rg'
+let g:rg_command = g:rg_binary. ' --vimgrep --follow --no-ignore-vcs'
+
 " CSV                                                          {{{2
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

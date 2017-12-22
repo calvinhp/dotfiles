@@ -270,3 +270,5 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -h "/usr/local/bin/rbenv" ]] && eval "$(rbenv init -)"
+
+eval $(thefuck --alias)
