@@ -16,6 +16,8 @@ Plug 'slim-template/vim-slim'
 Plug 'sukima/xmledit'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rails'
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
 
 " Object manipulation
 Plug 'godlygeek/tabular'
