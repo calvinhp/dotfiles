@@ -13,7 +13,7 @@ branch, error = gitsym.communicate()
 
 error_string = error.decode('utf-8')
 
-if error_string.find('fatal: Not a git repository') != -1:
+if error_string.lower().find('fatal: not a git repository') != -1:
 	import sys
 	sys.exit(0)
 
