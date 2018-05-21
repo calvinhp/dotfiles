@@ -60,8 +60,6 @@
 "                       is the TextMate equivalent of ctrl+cmd+r
 "    tmi             -- Toggle indent guides
 "    tmy             -- Show the yankring
-"    tmz             -- Push default register to remote server's
-"                       pbcopy. Basically copy from VM -> OS X.
 "    tmb             -- Shortcut for getting to NERDTree bookmarks
 "    tm1             -- Set a highlight for the current word (1)
 "    tm2             -- Set a highlight for the current word (2)
@@ -195,6 +193,9 @@ set hidden
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Use the clipboard
+set clipboard^=unnamed,unnamedplus
+
 " The first setting tells vim to use "autoindent" (that is, use the current
 " line's indent level to set the indent level of new lines). The second makes
 " vim attempt to intelligently guess the indent level of any new line based on
@@ -327,9 +328,6 @@ au BufReadPost COMMIT_EDITMSG* exe "normal! gg"
 
 " turn off smart indentation when pasting
 set pastetoggle=<F2>
-
-" Send register back to my computer's clipboard
-map <silent> tmz :call PushRegister(@")<CR>
 
 " Searching                                                    {{{1
 " -----------------------------------------------------------------
@@ -681,15 +679,6 @@ function! RegisterToFile(...)
     exe "redir! > " . l:filename
     echo getreg(l:register)
     redir END
-endfunction
-
-" Push a register back to my clipboard                         {{{2
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-function! PushRegister(text)
-    silent !clear
-    silent execute '!printf "\%s" '. shellescape(a:text, 1) .' | nc localhost 2225'
-    silent execute ':redraw!'
 endfunction
 
 " Save a file with sudo when it is [readonly]                  {{{2
