@@ -2,6 +2,10 @@ UNAME=$(uname)
 
 source ~/.commonfuncs
 
+if [ -e /usr/local/etc/profile.d/z.sh ]; then
+. /usr/local/etc/profile.d/z.sh
+fi
+
 # what freakin' linux is this?
 alias what_linux="cat /etc/issue"
 
@@ -151,14 +155,6 @@ alias rum='ru default@mailcatcher'
 
 # bundler
 alias be='bundle exec'
-
-# Zeus.
-alias z='zeus'
-alias zss='z start'
-alias zs='z server Puma -p 3001'
-alias zc='z console'
-alias zr='z rake'
-alias zt='z test'
 
 # Vagrant ssh commands
 alias vssh="vagrant ssh"
