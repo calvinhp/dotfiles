@@ -19,24 +19,7 @@ expected_path=(
   "$HOME/Documents/android-sdk-mac-x86_64-20140321/tools"
   "$HOME/Documents/android-sdk-mac-x86_64-20140321/platform-tools"
   "$HOME/node_modules/jshint/bin"
-  /opt/php53/bin
-  /opt/local/apache2/bin
-  /opt/python/bin
-  /opt/local/bin
-  /opt/local/sbin
-  /opt/local/lib/postgresql93/bin
-  /opt/local/lib/postgresql91/bin
-  /opt/local/lib/postgresql90/bin
-  /opt/local/lib/postgresql83/bin
-  /opt/local/lib/mysql56/bin
-  /opt/local/lib/mysql55/bin
-  /opt/local/lib/mysql5/bin
-  /opt/local/lib/mysql4/bin
-  /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin
-  /opt/local/Library/Frameworks/Python.framework/Versions/2.4/bin
-  /fuck/bin
-  /sw/bin
-  /sw/sbin
+  /home/linuxbrew/.linuxbrew/bin
   /usr/bin/perlbin/site
   /usr/bin/perlbin/vendor
   /usr/bin/perlbin/core
@@ -53,7 +36,6 @@ expected_path=(
   /usr/bsd
   /usr/libexec
   /Developer/Tools
-  /opt/ruby1.8/bin
   /usr/X11R6/bin
   /usr/X11/bin
   /usr/bin/X11
