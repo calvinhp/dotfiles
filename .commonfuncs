@@ -26,6 +26,22 @@ makeMeLaugh() {
   fi
 }
 
+grabFoxpass() {
+    op get item xyskqj6kqbrfnb5fbdlhx6isoa | jq -j '.details.fields[]|select(.name=="password")|.value' | xclip -selection clipboard
+}
+
+awsenv() {
+    $(op get item $1 | jq -r '.details.sections[].fields|.[]|select(.t|startswith("AWS_"))|.t+"="+.v' | sed -z 's/^/export /; s/\n/ /g')
+}
+
+resticenv() {
+    $(op get item backblaze.com | jq -r '.details.sections[]|select(.title=="Restic").fields[]|.t+"="+.v' | sed -z 's/^/export /; s/\n/ /g')
+}
+
+asciiupload() {
+    curl -v -u $USER:$(cat ~/.config/asciinema/install-id) https://asciinema.org/api/asciicasts -F asciicast=@$1
+}
+
 lulz() {
   local VOICE
   local msg

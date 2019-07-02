@@ -441,8 +441,8 @@ function! s:completeColorSchemes(A,L,P)
 endfunction
 
 " set the colorscheme
+ColorSwitcher g:light_theme
 " ColorSwitcher g:dark_theme
-ColorSwitcher g:dark_theme
 
 " switch between light and dark colors
 map <silent> <leader>c :ColorSwitcher<CR>
@@ -725,6 +725,8 @@ endfunction
 " turn on filetype checking for plugins like pyflakes
 filetype on                " enables filetype detection
 filetype plugin indent on  " enables filetype specific plugins
+
+let vim_markdown_preview_pandoc=1
 
 " Ack                                                          {{{2
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

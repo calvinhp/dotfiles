@@ -11,6 +11,7 @@ expected_path=(
   ./bin
   "$HOME/bin/$MACHTYPE-$OSTYPE"
   "$HOME/bin"
+  "/home/linuxbrew/.linuxbrew/bin"
   "$HOME/bin/git_achievements"
   "$HOME/.rbenv/shims"
   "$HOME/.rbenv/versions/2.2.2/bin"
@@ -122,7 +123,7 @@ fi
 export PYTHONSTARTUP=$HOME/.pystartup
 
 # pip settings
-export PIP_FIND_LINKS="https://dist.sixfeetup.com/public/"
+#export PIP_FIND_LINKS="https://dist.sixfeetup.com/public/"
 
 # set up some more OS X specific stuff
 if [ $UNAME = "Darwin" ]; then

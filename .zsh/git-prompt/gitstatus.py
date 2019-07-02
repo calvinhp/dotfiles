@@ -38,7 +38,7 @@ else:
 remote = ''
 
 if not branch: # not on any branch
-	branch = symbols['prehash']+ Popen(['git','rev-parse','--short','HEAD'], stdout=PIPE).communicate()[0][:-1]
+	branch = symbols['prehash']+ str(Popen(['git','rev-parse','--short','HEAD'], stdout=PIPE).communicate()[0][:-1])
 else:
 	remote_name = Popen(['git','config','branch.%s.remote' % branch], stdout=PIPE).communicate()[0].strip()
 	if remote_name:
