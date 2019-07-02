@@ -1,9 +1,5 @@
 UNAME=$(uname)
 
-grabFoxpass() {
-    lpass show --password 3773368487971820655 | tr -d '\n' | xclip -selection clipboard
-}
-
 makeMeLaugh() {
   if checkPath fortune; then
     local FORTUNE
@@ -141,26 +137,6 @@ weShouldUpdate() {
         return 0
     fi
     return 1
-}
-
-search_movies() {
-    local movies
-    movies=`/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner -l -c 1 | awk -F: '{print $2}'`
-    echo $movies | grep -i $1
-}
-
-tmh() {
-    [[ -z "$1" ]] && echo 'project name is required' && return 1
-    local location
-    export T_PROJ=$1
-    [[ -z "$2" ]] && location=local || location="$2"
-    if [[ -n "$3" ]]; then
-        export T_BUILD="$3"
-    fi
-    if [[ -n "$4" ]]; then
-        export T_PREFIX="$4"
-    fi
-    teamocil --here $location
 }
 
 # Git stash + fzf = awesome

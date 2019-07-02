@@ -12,18 +12,7 @@ expected_path=(
   "$HOME/bin/$MACHTYPE-$OSTYPE"
   "$HOME/bin"
   "/home/linuxbrew/.linuxbrew/bin"
-  "$HOME/bin/git_achievements"
-  "$HOME/.rbenv/shims"
-  "$HOME/.rbenv/versions/2.2.2/bin"
-  "$HOME/.gem/ruby/1.8/bin"
-  "$HOME/Documents/android-sdk-mac-x86_64-20140321/tools"
-  "$HOME/Documents/android-sdk-mac-x86_64-20140321/platform-tools"
-  "$HOME/node_modules/jshint/bin"
-  /home/linuxbrew/.linuxbrew/bin
-  /usr/bin/perlbin/site
-  /usr/bin/perlbin/vendor
-  /usr/bin/perlbin/core
-  /usr/local/Cellar/python/2.7/bin
+  "/home/linuxbrew/.linuxbrew/sbin"
   /usr/local/bin
   /usr/local/sbin
   /usr/local/etc

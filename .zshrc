@@ -40,9 +40,6 @@ alias -g site-packages='-c "from distutils.sysconfig import get_python_lib; prin
 # 
 # NOTE: you can expand aliases with "_expand_alias"
 #       see bindkey for more info $ bindkey -M viins
-alias -g spriv='https://svn.sixfeetup.com/svn/private/'
-alias -g spub='https://svn.sixfeetup.com/svn/public/'
-alias -g scollective='https://svn.plone.org/svn/collective/'
 alias -g sgit='https://git.sixfeetup.com/git/'
 
 # some pipes
@@ -89,9 +86,6 @@ alias -g TS='| ts -i'
 alias -g FZ='| fzf -m'
 alias -g FZF='| fzf -m'
 
-# cvs setup
-export CVSROOT=:pserver:clayton@cvs:/var/cvsroot
-
 # automatically print timing statistics if the command took longer
 # than a minute
 export REPORTTIME=60
@@ -115,8 +109,6 @@ setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
 alias histappend="fc -AI"
 alias histread="fc -R"
-
-alias python=python3
 
 # Look for a command that started like the one starting on the command line.
 # taken from: http://www.xsteve.at/prg/zsh/.zshrc (not sure of original source)
@@ -222,9 +214,6 @@ compctl -s '$(\ls /opt/local/share/games/fortune | grep .dat | sed "s/.dat//")' 
 ## Completions
 autoload -U compinit
 compinit -C
-
-# make sure git-achievements can complete like git
-compdef git-achievements=git
 
 ## case-insensitive (all),partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'

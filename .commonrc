@@ -119,16 +119,8 @@ alias lsofp="sudo lsof -p"
 alias delpyc="find . -name '*.pyc' -delete"
 alias brokensymlinks="find -L . -type l"
 
-# svn helpers
-alias svnps="svn propset svn:externals -F EXTERNALS.txt ."
-alias svnpsi="svn propset svn:ignore -F IGNORE.txt ."
-# Needs to be a better way to do this... (global aliases + zsh, see the .zshrc)
-export sfuprivate='https://svn.sixfeetup.com/svn/private'
-export sfupublic='https://svn.sixfeetup.com/svn/public'
-
 # zope runs most QA/Staging instances...
 alias zu='sudo -H -u zope'
-alias ku='sudo -H -u karl'
 
 # buildout...
 alias bbn='bin/buildout'
@@ -148,26 +140,8 @@ fi
 # pep8 that can scan a `src` dir
 alias pep8scan="pep8 --repeat --show-source --statistics --exclude='paste,*PasteDeploy*,bootstrap.py'"
 
-# Ruby and rvm stuff
-alias ru='rvm use'
-alias rud='ru default@tb'
-alias rum='ru default@mailcatcher'
-
-# bundler
-alias be='bundle exec'
-
 # Vagrant ssh commands
 alias vssh="vagrant ssh"
-
-vs() {
-    vagrant ssh -c "rvm use default@tb && cd /vagrant && $1"
-}
-alias vsss="vs 'zeus start'"
-alias vss="vs 'zeus server Puma -p 3001'"
-alias vsc="vs 'zeus console'"
-alias vsr="vs 'zeus rake'"
-alias vst="vs 'zeus test'"
-alias vsd="vs 'zeus dbconsole'"
 
 # I have a folder of custom made fortunes...
 if checkPath fortune && [ -d /opt/local/share/games/fortune/comedy ]; then
@@ -244,11 +218,6 @@ elif checkPath xdg-open; then
     alias open=xdg-open
 fi
 
-# etckeeper aliases
-alias etck="sudo etckeeper"
-alias etckv="etck vcs"
-alias etcks="etckv status"
-
 # Shortened commands
 alias g=git
 alias s=svn
@@ -284,16 +253,6 @@ fi
 
 # Tmuxinator setup
 [[ -s ~/.tmuxinator/scripts/tmuxinator ]] && source ~/.tmuxinator/scripts/tmuxinator
-
-# Nix setup
-if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
-
-# Chruby
-if [ -d /usr/local/share/chruby ]; then
-    source /usr/local/share/chruby/chruby.sh
-    # use a default version
-    chruby 2.2.3
-fi
 
 ## Functions
 
@@ -366,35 +325,6 @@ function bfg() {
         "bin/$instance" fg
     else
         print "Couldn't find a start script. Is this a third party buildout?"
-    fi
-}
-
-# launch a VMWare vm in the background
-#
-# Set $VM_LIBRARY and $VM_VMRUN to alternate locations if
-# necessary
-export VM_LIBRARY="$HOME/Documents/Virtual Machines.localized"
-if [ -e "/Library/Application Support/VMWare Fusion/vmrun" ]; then
-    export VM_VMRUN="/Library/Application Support/VMware Fusion/vmrun"
-else
-    export VM_VMRUN="/Applications/VMware Fusion.app/Contents/Library/vmrun"
-fi
-function noguivm() {
-    local vmx_name
-    local vm_location
-    # the vmx filename will be based on the first arg given
-    vmx_name="$1.vmwarevm/$1.vmx"
-    # We will default to FreeBSD since that is the one used most
-    [ -z "$1" ] && vmx_name="FreeBSD.vmwarevm/FreeBSD.vmx"
-    vm_location="$VM_LIBRARY/$vmx_name"
-    # If that file exists, let's start up the VM
-    # XXX: couldn't get the test to work...
-    if [[ -e $vm_location ]]; then
-        print "Starting $vm_location"
-        # XXX: This is silly, wtf.
-        eval "'$VM_VMRUN'" -T fusion start "'$vm_location'" nogui
-    else
-        print "VM not available: $vm_location"
     fi
 }
 

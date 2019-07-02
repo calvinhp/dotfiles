@@ -736,9 +736,10 @@ map <leader>a :Ack!<Space>
 " highlight search term matches
 let g:ackhighlight = 1
 
+" shortcut for rip-grep search
 map <leader>r :Rg<Space>
 let g:rg_binary = 'rg'
-let g:rg_command = g:rg_binary. ' --vimgrep --follow --no-ignore-vcs'
+let g:rg_command = g:rg_binary. ' --vimgrep --follow --ignore-vcs'
 
 " CSV                                                          {{{2
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1172,6 +1173,6 @@ if has("gui_running")
     endif
 endif
 
-set background=light
+set background=dark
 " turn on folds
 " vim: fdm=marker
