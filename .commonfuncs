@@ -1,5 +1,9 @@
 UNAME=$(uname)
 
+grabFoxpass() {
+    lpass show --password 3773368487971820655 | tr -d '\n' | xclip -selection clipboard
+}
+
 makeMeLaugh() {
   if checkPath fortune; then
     local FORTUNE

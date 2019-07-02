@@ -361,8 +361,8 @@ let python_highlight_all=1
 
 " gui and terminal compatible color scheme
 set t_Co=256
-"set background=dark
-set background=light
+set background=dark
+"set background=light
 " set global variables that will define the colorscheme
 let g:light_theme='one'
 " let g:light_theme='solarized8_light_high'
@@ -1170,5 +1170,6 @@ if has("gui_running")
     endif
 endif
 
+set background=light
 " turn on folds
 " vim: fdm=marker

@@ -43,6 +43,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'croaky/vim-colors-github'
 Plug 'iissnan/tangoX'
 Plug 'rakr/vim-one'
+Plug 'connorholyday/vim-snazzy'
+
 
 " UI
 Plug 'vim-airline/vim-airline' | Plug 'paranoida/vim-airlineish' | Plug 'vim-airline/vim-airline-themes'

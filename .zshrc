@@ -116,6 +116,8 @@ setopt EXTENDED_HISTORY
 alias histappend="fc -AI"
 alias histread="fc -R"
 
+alias python=python3
+
 # Look for a command that started like the one starting on the command line.
 # taken from: http://www.xsteve.at/prg/zsh/.zshrc (not sure of original source)
 function history-search-end {

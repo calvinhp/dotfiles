@@ -135,6 +135,15 @@ if [ -d "$HOME/.config" ]; then
     to_create="$HOME/.config/$dotfile"
     # actually create/remove the link
     linkDotfile "$dotfile" "$to_create" "$actual_dotfile"
+
+    # Take care of kitty configs
+    # -----------------------------------------------------------------
+    actual_dotfile="$dotfiles_loc/kitty.conf"
+    dotfile="kitty"
+    [ -d "$HOME/.config/$dotfile" ] || mkdir "$HOME/.config/$dotfile"
+    to_create="$HOME/.config/$dotfile/$dotfile.conf"
+    # actually create/remove the link
+    linkDotfile "$dotfile" "$to_create" "$actual_dotfile"
 fi
 
 # link vimrc for neovim to use
