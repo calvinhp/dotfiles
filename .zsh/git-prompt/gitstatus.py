@@ -60,7 +60,7 @@ else:
 			remote += '%s%s' % (symbols['ahead of'], ahead)
 
 out = '\n'.join([
-	str(branch),
+	str(branch.decode()),
 	remote,
 	staged,
 	conflicts,

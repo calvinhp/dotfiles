@@ -261,6 +261,3 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -h "/usr/local/bin/rbenv" ]] && eval "$(rbenv init -)"
-export PATH="/home/calvin/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
