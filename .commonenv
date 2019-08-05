@@ -91,7 +91,7 @@ if checkPath vimpager; then
 fi
 
 # get crazy with python, and the cheese whiz
-export PYTHONSTARTUP=$HOME/.pystartup
+#export PYTHONSTARTUP=$HOME/.pystartup
 
 # pip settings
 #export PIP_FIND_LINKS="https://dist.sixfeetup.com/public/"
