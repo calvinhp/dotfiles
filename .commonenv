@@ -9,6 +9,7 @@ source ~/.commonfuncs
 new_path=""
 expected_path=(
   ./bin
+  "$HOME/.pyenv/bin"
   "$HOME/bin/$MACHTYPE-$OSTYPE"
   "$HOME/bin"
   "/home/linuxbrew/.linuxbrew/bin"

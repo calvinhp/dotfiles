@@ -260,8 +260,7 @@ if [ -z $MY_ZSH_PLUGINS_LOADED ] && is-at-least 4.3; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/OneDrive/Documents/z/z.sh ] && source ~/OneDrive/Documents/z/z.sh
+[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh ] && source /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 [[ -h "/usr/local/bin/rbenv" ]] && eval "$(rbenv init -)"
-export PATH="/home/calvin/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

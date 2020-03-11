@@ -26,6 +26,11 @@ grabFoxpass() {
     op get item xyskqj6kqbrfnb5fbdlhx6isoa | jq -j '.details.fields[]|select(.name=="password")|.value' | xclip -selection clipboard
 }
 
+grabIUH() {
+    op get item wtt46j6igkidycijjocslp5zpy | jq -j '.details.fields[]|select(.name=="password")|.value' 
+}
+
+
 awsenv() {
     $(op get item $1 | jq -r '.details.sections[].fields|.[]|select(.t|startswith("AWS_"))|.t+"="+.v' | sed -z 's/^/export /; s/\n/ /g')
 }
