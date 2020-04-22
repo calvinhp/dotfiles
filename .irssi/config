@@ -59,7 +59,7 @@ channels = (
   { name = "#pyramid"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#karl"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#repoze"; chatnet = "freenode"; autojoin = "Yes"; },
-  { name = "#zsh"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#zsh"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -224,6 +224,13 @@ statusbar = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
