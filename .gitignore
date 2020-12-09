@@ -42,4 +42,4 @@ htmlcov/
 .vim/spell/en.utf-8.sug
 env/
 .cache/
-env/
+venv/
