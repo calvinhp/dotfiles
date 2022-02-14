@@ -1,0 +1,12 @@
+[".config/kitty/kitty-themes"]
+    type = "archive"
+    url = "https://github.com/dexpota/kitty-themes/archive/refs/heads/master.zip"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+[".config/kitty/kitty_search"]
+    type = "archive"
+    url = "https://github.com/trygveaa/kitty-kitten-search/archive/refs/heads/master.zip"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
