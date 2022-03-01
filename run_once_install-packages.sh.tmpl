@@ -1,0 +1,25 @@
+#!/bin/sh
+{{ if not (lookPath "nvim") }}
+brew install neovim
+{{ end }}
+{{ if not (lookPath "exa") }}
+brew install exa
+{{ end }}
+{{ if not (lookPath "pyenv") }}
+brew install pyenv
+{{ end }}
+{{ if not (lookPath "pipx") }}
+brew install pipx
+pipx ensurepath
+{{ end }}
+{{ if not (lookPath "rg") }}
+brew install ripgrep
+{{ end }}
+brew install --cask homebrew/cask-fonts/font-jetbrains-mono-nerd-font
+{{ if eq .chezmoi.os "linux" -}}
+curl -L https://github.com/vadviktor/bullettrain-go-core/releases/download/2021.1.2/bullettrain.linux-amd64 > ~/bin/bullettrain
+{{ else if eq .chezmoi.os "darwin" -}}
+curl -L https://github.com/vadviktor/bullettrain-go-core/releases/download/2021.1.2/bullettrain.darwin-amd64 > ~/bin/bullettrain
+{{ end -}}
+chmod 755 ~/bin/bullettrain
+
