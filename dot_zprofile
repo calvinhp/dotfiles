@@ -1,0 +1,4 @@
+
+# Created by `pipx` on 2022-03-07 14:47:38
+export PATH="$PATH:/Users/calvin/.local/bin"
+eval "$(pyenv init --path)"

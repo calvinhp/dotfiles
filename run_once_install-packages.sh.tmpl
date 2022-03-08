@@ -15,11 +15,15 @@ pipx ensurepath
 {{ if not (lookPath "rg") }}
 brew install ripgrep
 {{ end }}
+{{ if not (lookPath "broot") }}
+brew install broot
+{{ end }}
+{{ if not (lookPath "z") }}
+brew install zoxide
+{{ end }}
+brew install powerlevel10k
 brew install --cask homebrew/cask-fonts/font-jetbrains-mono-nerd-font
-{{ if eq .chezmoi.os "linux" -}}
-curl -L https://github.com/vadviktor/bullettrain-go-core/releases/download/2021.1.2/bullettrain.linux-amd64 > ~/bin/bullettrain
-{{ else if eq .chezmoi.os "darwin" -}}
-curl -L https://github.com/vadviktor/bullettrain-go-core/releases/download/2021.1.2/bullettrain.darwin-amd64 > ~/bin/bullettrain
-{{ end -}}
-chmod 755 ~/bin/bullettrain
+{{ if not (stat (joinPath .chezmoi.homeDir "bin")) }}
+mkdir {{ joinPath .chezmoi.homeDir "bin" }}
+{{ end }}
 
